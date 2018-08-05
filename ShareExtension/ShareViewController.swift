@@ -8,24 +8,94 @@
 
 import UIKit
 import Social
+import MobileCoreServices
 
 class ShareViewController: SLComposeServiceViewController {
-
-    override func isContentValid() -> Bool {
-        // Do validation of contentText and/or NSExtensionContext attachments here
-        return true
+    let userDefaultsKey = "LinksUserDefaultsKey"
+    var selectedList = "Saved"
+    
+    var links: Array<String> {
+        get {
+            let userDefaults = UserDefaults(suiteName: "group.com.mr-sobhi.ShareExtensionDemo")
+            if let links = userDefaults?.object(forKey:userDefaultsKey) as! Array<String>? {
+                return links
+            }
+            
+            return []
+        }
+        set {
+            let userDefaults = UserDefaults(suiteName: "group.com.mr-sobhi.ShareExtensionDemo")
+            userDefaults?.set(newValue, forKey: userDefaultsKey)
+            userDefaults?.synchronize()
+        }
+    }
+    
+    var savedLinks: Array<String> {
+        get {
+            let userDefaults = UserDefaults(suiteName: "group.com.mr-sobhi.ShareExtensionDemo")
+            if let links = userDefaults?.object(forKey: "SavedLinksUserDefaultsKey") as! Array<String>? {
+                return links
+            }
+            
+            return []
+        }
+        set {
+            let userDefaults = UserDefaults(suiteName: "group.com.mr-sobhi.ShareExtensionDemo")
+            userDefaults?.set(newValue, forKey: "SavedLinksUserDefaultsKey")
+            userDefaults?.synchronize()
+        }
     }
 
     override func didSelectPost() {
-        // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
+        let contentType = kUTTypeURL as String
+        let content = extensionContext!.inputItems.first as! NSExtensionItem
+        
+        print("Did select post")
+        
+        if let attachment = content.attachments?.first {
+            if (attachment as AnyObject).hasItemConformingToTypeIdentifier(contentType) {
+                (attachment as AnyObject).loadItem(forTypeIdentifier: contentType, options: nil, completionHandler: { (data, error) in
+                    guard error == nil else {
+                        print(error)
+                        return
+                    }
+                    print("attempting to save url")
+                    
+                    let url = data as! NSURL
+                    if self.selectedList == "Saved" {
+                        self.links.append(url.absoluteString!)
+                        print("links appended")
+                        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
+                    } else {
+                        self.savedLinks.append(url.absoluteString!)
+                        print("saved links appended")
+                        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
+                    }
+                })
+            }
+        }
+    }
     
-        // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
-        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
-    }
-
     override func configurationItems() -> [Any]! {
-        // To add configuration options via table cells at the bottom of the sheet, return an array of SLComposeSheetConfigurationItem here.
-        return []
+        let item = SLComposeSheetConfigurationItem()
+        item?.title = "Selected List"
+        item?.value = selectedList
+        
+        item?.tapHandler = {
+            let vc = ShareSelectViewController()
+            vc.delegate = self
+            self.pushConfigurationViewController(vc)
+        }
+        
+        return [item!]
     }
 
+}
+
+extension ShareViewController: ShareSelectViewControllerDelegate {
+    func selected(list: String) {
+        selectedList = list
+        reloadConfigurationItems()
+        popConfigurationViewController()
+    }
 }

@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  ShareExtensionDemo
 //
-//  Updated by Mohamed Sobhy Fouda on 8/5/18.
-//  Created by Hesham Abd-Elmegid on 7/4/16.
+//  Created by Mohamed Sobhi  Fouda on 8/5/18.
 //  Copyright © 2016 CareerFoundry. All rights reserved.
 //
 
@@ -15,13 +14,17 @@ class LinksViewController: UITableViewController, SFSafariViewControllerDelegate
     
     var links: Array<String> {
         get {
-            if let linksFromUserDefaults = UserDefaults.standard.object(forKey: userDefaultsKey) {
-                return linksFromUserDefaults as! Array<String>
+            let userDefaults = UserDefaults(suiteName: "group.com.mr-sobhi.ShareExtensionDemo")
+            if let links = userDefaults?.object(forKey: userDefaultsKey) as! Array<String>? {
+                return links
             }
+            
             return []
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: userDefaultsKey)
+            let userDefaults = UserDefaults(suiteName: "group.com.mr-sobhi.ShareExtensionDemo")
+            userDefaults?.set(newValue, forKey: userDefaultsKey)
+            userDefaults?.synchronize()
         }
     }
     
@@ -46,6 +49,10 @@ class LinksViewController: UITableViewController, SFSafariViewControllerDelegate
         
         present(alertController, animated: true, completion: nil)
    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

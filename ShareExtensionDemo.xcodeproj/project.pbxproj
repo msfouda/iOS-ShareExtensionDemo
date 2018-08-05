@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5417C6C71D2AB6860014CF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5417C6C61D2AB6860014CF74 /* AppDelegate.swift */; };
-		5417C6C91D2AB6860014CF74 /* LinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5417C6C81D2AB6860014CF74 /* LinksViewController.swift */; };
 		5417C6CC1D2AB6860014CF74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5417C6CA1D2AB6860014CF74 /* Main.storyboard */; };
 		5417C6CE1D2AB6860014CF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5417C6CD1D2AB6860014CF74 /* Assets.xcassets */; };
 		5417C6D11D2AB6860014CF74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5417C6CF1D2AB6860014CF74 /* LaunchScreen.storyboard */; };
-		D40BB4C621178D5E00481E6C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40BB4C521178D5E00481E6C /* ShareViewController.swift */; };
 		D40BB4C921178D5E00481E6C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40BB4C721178D5E00481E6C /* MainInterface.storyboard */; };
 		D40BB4CD21178D5E00481E6C /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D40BB4C321178D5E00481E6C /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D40BB4D82117984300481E6C /* AddLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40BB4D62117984200481E6C /* AddLinkViewController.swift */; };
+		D40BB4D92117984300481E6C /* LinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40BB4D72117984200481E6C /* LinksViewController.swift */; };
+		D40BB4DC2117985C00481E6C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40BB4DA2117985C00481E6C /* ShareViewController.swift */; };
+		D40BB4DD2117985C00481E6C /* ShareSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40BB4DB2117985C00481E6C /* ShareSelectViewController.swift */; };
+		D40BB4DF2117986800481E6C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40BB4DE2117986700481E6C /* Info.plist */; };
+		D40BB4E121179CE500481E6C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D40BB4E021179CE500481E6C /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +48,19 @@
 /* Begin PBXFileReference section */
 		5417C6C31D2AB6860014CF74 /* ShareExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5417C6C61D2AB6860014CF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5417C6C81D2AB6860014CF74 /* LinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
 		5417C6CB1D2AB6860014CF74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5417C6CD1D2AB6860014CF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5417C6D01D2AB6860014CF74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5417C6D21D2AB6860014CF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D40BB4C321178D5E00481E6C /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		D40BB4C521178D5E00481E6C /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		D40BB4C821178D5E00481E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		D40BB4CA21178D5E00481E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D40BB4D121178F7800481E6C /* ShareExtensionDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtensionDemo.entitlements; sourceTree = "<group>"; };
+		D40BB4D221178FA500481E6C /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
+		D40BB4D62117984200481E6C /* AddLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLinkViewController.swift; sourceTree = "<group>"; };
+		D40BB4D72117984200481E6C /* LinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
+		D40BB4DA2117985C00481E6C /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		D40BB4DB2117985C00481E6C /* ShareSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSelectViewController.swift; sourceTree = "<group>"; };
+		D40BB4DE2117986700481E6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D40BB4E021179CE500481E6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,12 +102,14 @@
 		5417C6C51D2AB6860014CF74 /* ShareExtensionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D40BB4D121178F7800481E6C /* ShareExtensionDemo.entitlements */,
 				5417C6C61D2AB6860014CF74 /* AppDelegate.swift */,
-				5417C6C81D2AB6860014CF74 /* LinksViewController.swift */,
+				D40BB4D62117984200481E6C /* AddLinkViewController.swift */,
+				D40BB4D72117984200481E6C /* LinksViewController.swift */,
 				5417C6CA1D2AB6860014CF74 /* Main.storyboard */,
 				5417C6CD1D2AB6860014CF74 /* Assets.xcassets */,
 				5417C6CF1D2AB6860014CF74 /* LaunchScreen.storyboard */,
-				5417C6D21D2AB6860014CF74 /* Info.plist */,
+				D40BB4E021179CE500481E6C /* Info.plist */,
 			);
 			path = ShareExtensionDemo;
 			sourceTree = "<group>";
@@ -107,9 +117,11 @@
 		D40BB4C421178D5E00481E6C /* ShareExtension */ = {
 			isa = PBXGroup;
 			children = (
-				D40BB4C521178D5E00481E6C /* ShareViewController.swift */,
+				D40BB4D221178FA500481E6C /* ShareExtension.entitlements */,
+				D40BB4DA2117985C00481E6C /* ShareViewController.swift */,
+				D40BB4DB2117985C00481E6C /* ShareSelectViewController.swift */,
 				D40BB4C721178D5E00481E6C /* MainInterface.storyboard */,
-				D40BB4CA21178D5E00481E6C /* Info.plist */,
+				D40BB4DE2117986700481E6C /* Info.plist */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -165,11 +177,23 @@
 				TargetAttributes = {
 					5417C6C21D2AB6860014CF74 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = NB6843XNJU;
 						LastSwiftMigration = 0900;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D40BB4C221178D5E00481E6C = {
 						CreatedOnToolsVersion = 9.4.1;
+						DevelopmentTeam = NB6843XNJU;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -197,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40BB4E121179CE500481E6C /* Info.plist in Resources */,
 				5417C6D11D2AB6860014CF74 /* LaunchScreen.storyboard in Resources */,
 				5417C6CE1D2AB6860014CF74 /* Assets.xcassets in Resources */,
 				5417C6CC1D2AB6860014CF74 /* Main.storyboard in Resources */,
@@ -207,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40BB4DF2117986800481E6C /* Info.plist in Resources */,
 				D40BB4C921178D5E00481E6C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5417C6C91D2AB6860014CF74 /* LinksViewController.swift in Sources */,
+				D40BB4D82117984300481E6C /* AddLinkViewController.swift in Sources */,
+				D40BB4D92117984300481E6C /* LinksViewController.swift in Sources */,
 				5417C6C71D2AB6860014CF74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,7 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D40BB4C621178D5E00481E6C /* ShareViewController.swift in Sources */,
+				D40BB4DD2117985C00481E6C /* ShareSelectViewController.swift in Sources */,
+				D40BB4DC2117985C00481E6C /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,10 +402,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShareExtensionDemo/ShareExtensionDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = NB6843XNJU;
 				INFOPLIST_FILE = ShareExtensionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.careerfoundry.ShareExtensionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mr-sobhi.ShareExtensionDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -389,10 +419,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShareExtensionDemo/ShareExtensionDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = NB6843XNJU;
 				INFOPLIST_FILE = ShareExtensionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.careerfoundry.ShareExtensionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mr-sobhi.ShareExtensionDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -409,13 +441,15 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NB6843XNJU;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.careerfoundry.ShareExtensionDemo.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mr-sobhi.ShareExtensionDemo.ShareExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -434,13 +468,15 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NB6843XNJU;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ShareExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.careerfoundry.ShareExtensionDemo.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mr-sobhi.ShareExtensionDemo.ShareExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
